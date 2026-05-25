@@ -12,14 +12,14 @@ export default function Quiz() {
   const [timeLeft, setTimeLeft] = useState(null)
 
   useEffect(() => {
-    axios.get('${import.meta.env.VITE_API_URL}/api/quiz/${id}/')
+    axios.get(`https://brain-battle-production-baef.up.railway.app/api/quiz/${id}/`)
       .then(res => setQuiz(res.data))
   }, [id])
 
   const submitResult = useCallback(async (finalScore, total) => {
     const token = localStorage.getItem('token')
     try {
-      await axios.post('${import.meta.env.VITE_API_URL}/api/quiz/submit/`, form', {
+      await axios.post(`https://brain-battle-production-baef.up.railway.app/api/quiz/submit/`, {
         quiz_id: id,
         score: finalScore,
         total: total

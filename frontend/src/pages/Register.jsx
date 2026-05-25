@@ -9,7 +9,7 @@ export default function Register() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/api/users/register/`, form)
+      await axios.post(`https://brain-battle-production-baef.up.railway.app/api/users/register/`, form)
       navigate('/login')
     } catch {
       setError('Registration failed. Try a different username.')
