@@ -19,13 +19,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
+from decouple import config
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-s36b@0v9o#rjuhq^6mnii9vm9equ^15fc0_c7-&h8k696!^^u4'
+SECRET_KEY = config ('django-insecure-s36b@0v9o#rjuhq^6mnii9vm9equ^15fc0_c7-&h8k696!^^u4')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -87,14 +88,16 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'brainbattle',
-        'USER': 'root',
-        'PASSWORD': 'M@riaSQL!89',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': config('django.db.backends.mysql'),
+        'NAME': config('railway'),
+        'USER': config('root'),
+        'PASSWORD': config('niReHlkFTDTrOdYrCyzyyZueaDIFhqLR'),
+        'HOST': config('mysql.railway.internal'),
+        'PORT': config('3306'),
     }
 }
 
