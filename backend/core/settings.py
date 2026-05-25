@@ -92,12 +92,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('django.db.backends.mysql'),
-        'NAME': config('railway'),
-        'USER': config('root'),
-        'PASSWORD': config('niReHlkFTDTrOdYrCyzyyZueaDIFhqLR'),
-        'HOST': config('mysql.railway.internal'),
-        'PORT': config('3306'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD': 'niReHlkFTDTrOdYrCyzyyZueaDIFhqLR',
+        'HOST': 'mysql.railway.internal',
+        'PORT': '3306',
     }
 }
 
