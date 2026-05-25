@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 from decouple import config
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config ('django-insecure-s36b@0v9o#rjuhq^6mnii9vm9equ^15fc0_c7-&h8k696!^^u4')
+SECRET_KEY = config ('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
