@@ -147,3 +147,4 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=24),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
 }
+CSRF_TRUSTED_ORIGINS = ['https://brain-battle-production-baef.up.railway.app']
