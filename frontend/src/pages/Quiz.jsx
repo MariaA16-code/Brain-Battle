@@ -12,14 +12,14 @@ export default function Quiz() {
   const [timeLeft, setTimeLeft] = useState(null)
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/quiz/${id}/`)
+    axios.get('${import.meta.env.VITE_API_URL}/api/quiz/${id}/')
       .then(res => setQuiz(res.data))
   }, [id])
 
   const submitResult = useCallback(async (finalScore, total) => {
     const token = localStorage.getItem('token')
     try {
-      await axios.post('http://127.0.0.1:8000/api/quiz/submit/', {
+      await axios.post('${import.meta.env.VITE_API_URL}/api/quiz/submit/`, form', {
         quiz_id: id,
         score: finalScore,
         total: total

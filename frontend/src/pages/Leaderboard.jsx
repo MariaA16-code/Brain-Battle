@@ -7,7 +7,7 @@ export default function Leaderboard() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/leaderboard/')
+    axios.get('${import.meta.env.VITE_API_URL}/api/leaderboard')
       .then(res => setLeaders(res.data))
   }, [])
 

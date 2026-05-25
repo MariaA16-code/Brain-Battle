@@ -10,7 +10,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/users/login/', form)
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/login/`, form)
       localStorage.setItem('token', res.data.access)
       localStorage.setItem('user', JSON.stringify(res.data.user))
       navigate('/')

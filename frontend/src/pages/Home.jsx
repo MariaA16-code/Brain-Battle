@@ -8,7 +8,7 @@ export default function Home() {
   const user = JSON.parse(localStorage.getItem('user'))
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/quiz/')
+    axios.get('${import.meta.env.VITE_API_URL}/api/users/quiz/`, form')
       .then(res => setQuizzes(res.data))
   }, [])
 
