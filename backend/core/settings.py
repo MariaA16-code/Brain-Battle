@@ -60,8 +60,8 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'root',
         'PASSWORD': 'niReHlkFTDTrOdYrCyzyyZueaDIFhqLR',
-        'HOST': 'mysql.railway.internal',
-        'PORT': '3306',
+        'HOST': 'autorack.proxy.rlwy.net',
+        'PORT': '27274',
     }
 }
 
