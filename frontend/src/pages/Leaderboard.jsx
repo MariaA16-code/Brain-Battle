@@ -7,7 +7,7 @@ export default function Leaderboard() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get(`https://brain-battle-production-baef.up.railway.app/api/leaderboard/`)
+    axios.get(`https://brainbattle-backend-ztcs.onrender.com/api/leaderboard/`)
       .then(res => setLeaders(res.data))
   }, [])
 

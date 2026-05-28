@@ -99,4 +99,5 @@ SIMPLE_JWT = {
 
 CSRF_TRUSTED_ORIGINS = [
     'https://brain-battle-swart.vercel.app',
+    'https://brainbattle-backend-ztcs.onrender.com',
 ]

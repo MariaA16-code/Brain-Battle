@@ -8,7 +8,7 @@ export default function Home() {
   const user = JSON.parse(localStorage.getItem('user'))
 
   useEffect(() => {
-    axios.get(`https://brain-battle-production-baef.up.railway.app/api/quiz/`)
+   axios.get(`https://brainbattle-backend-ztcs.onrender.com/api/quiz/`)
       .then(res => setQuizzes(res.data))
   }, [])
 

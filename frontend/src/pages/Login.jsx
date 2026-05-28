@@ -10,7 +10,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post(`https://brain-battle-production-baef.up.railway.app/api/users/login/`, form)
+      const res = await axios.post(`https://brainbattle-backend-ztcs.onrender.com/api/users/login/`, form)
       localStorage.setItem('token', res.data.access)
       localStorage.setItem('user', JSON.stringify(res.data.user))
       navigate('/')
