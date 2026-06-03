@@ -34,23 +34,37 @@ Technologies Used
 Project Structure
 
 Brain-Battle/
+
 ├── backend/
+
 │   ├── users/
+
 │   ├── quiz/
+
 │   ├── leaderboard/
+
 │   └── manage.py
+
 ├── frontend/
+
 │   ├── src/
+
 │   └── package.json
+
 └── README.md
 
 API Endpoints
 
 POST  /api/users/register/
+
 POST  /api/users/login/
+
 GET   /api/quiz/
+
 GET   /api/quiz/:id/
+
 POST  /api/quiz/submit/
+
 GET   /api/leaderboard/
 
 Run Locally
@@ -58,20 +72,27 @@ Run Locally
 Backend
 
 cd backend
+
 pip install -r requirements.txt
+
 python manage.py migrate
+
 python manage.py runserver
 
 Frontend
 
 cd frontend
+
 npm install
+
 npm run dev
 
 Deployment
 
 - Frontend: Vercel
+
 - Backend: Render
+
 - Database: Railway MySQL
 
 Developer
