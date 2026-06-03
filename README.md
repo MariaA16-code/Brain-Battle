@@ -37,22 +37,34 @@
 
 Brain-Battle/
 ├── backend/
+
 │   ├── users/
+
 │   ├── quiz/
+
 │   ├── leaderboard/
+
 │   └── manage.py
+
 ├── frontend/
 │   ├── src/
+
 │   └── package.json
+
 └── README.md
 
 🔗 API Endpoints
 
 POST  /api/users/register/
+
 POST  /api/users/login/
+
 GET   /api/quiz/
+
 GET   /api/quiz/:id/
+
 POST  /api/quiz/submit/
+
 GET   /api/leaderboard/
 
 ⚙️ Run Locally
