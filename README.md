@@ -1,132 +1,81 @@
 # 🎮 BrainBattle — Quiz & Trivia Platform
 
-> *Where intelligence becomes a weapon.*
-
-A full-stack quiz and trivia web application where users can register, browse quiz categories, take timed quizzes, view their scores, and compete on a global leaderboard.
+>A full-stack quiz application where users can register, take quizzes, view scores, and compete on a leaderboard.
 
 🔗 **Live Demo:** [brain-battle-swart.vercel.app](https://brain-battle-swart.vercel.app)
 
----
+Features
 
-## ✨ Features
+User
 
-### 👤 User
-- Register and login with JWT-secured authentication
-- Browse quizzes by category (Science, History, Technology, Sports)
-- Take timed quizzes with multiple choice questions
-- View score and result breakdown after each quiz
-- Compete on the global leaderboard
+- User registration and login
+- JWT authentication
+- Browse quizzes by category
+- Timed quizzes with multiple-choice questions
+- View quiz results and scores
+- Global leaderboard
 
-### 🛠️ Admin
-- Add and manage quiz categories
-- Create quizzes with custom timers
-- Add multiple choice questions with correct answer marking
-- View all user results
+Admin
 
----
+- Manage categories and quizzes
+- Add questions and answers
+- View user results
 
-## 🛠️ Tech Stack
+Technologies Used
 
-| Layer | Technology |
-|---|---|
-| Backend | Python Django + Django REST Framework |
-| Authentication | JWT (djangorestframework-simplejwt) |
-| Database | MySQL (Railway) |
-| Frontend | React JS (Vite) |
-| Styling | Tailwind CSS v4 |
-| Backend Hosting | Render.com |
-| Frontend Hosting | Vercel |
+- Python
+- Django
+- Django REST Framework
+- MySQL
+- React (Vite)
+- Tailwind CSS
+- JWT Authentication
 
----
+Project Structure
 
-## 📁 Project Structure
-
-```
 Brain-Battle/
 ├── backend/
-│   ├── core/           # Django project settings & URLs
-│   ├── users/          # User model, auth endpoints
-│   ├── quiz/           # Quiz, Question, Option, Result models & APIs
-│   ├── leaderboard/    # Leaderboard API
-│   ├── requirements.txt
+│   ├── users/
+│   ├── quiz/
+│   ├── leaderboard/
 │   └── manage.py
 ├── frontend/
 │   ├── src/
-│   │   └── pages/
-│   │       ├── Login.jsx
-│   │       ├── Register.jsx
-│   │       ├── Home.jsx
-│   │       ├── Quiz.jsx
-│   │       ├── Result.jsx
-│   │       └── Leaderboard.jsx
 │   └── package.json
 └── README.md
-```
 
----
+API Endpoints
 
-## 🗄️ Database Schema
+POST  /api/users/register/
+POST  /api/users/login/
+GET   /api/quiz/
+GET   /api/quiz/:id/
+POST  /api/quiz/submit/
+GET   /api/leaderboard/
 
-| Table | Description |
-|---|---|
-| `users_user` | User accounts with role-based access |
-| `quiz_category` | Quiz categories (Science, History, etc.) |
-| `quiz_quiz` | Quiz details with timer settings |
-| `quiz_question` | Questions linked to quizzes |
-| `quiz_option` | Answer choices with correct answer flag |
-| `quiz_result` | User quiz attempts and scores |
+Run Locally
 
----
+Backend
 
-## 🚀 API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/users/register/` | Register a new user |
-| POST | `/api/users/login/` | Login and get JWT token |
-| GET | `/api/quiz/` | Get all quizzes |
-| GET | `/api/quiz/:id/` | Get quiz with questions |
-| POST | `/api/quiz/submit/` | Submit quiz result |
-| GET | `/api/leaderboard/` | Get top 10 players |
-
----
-
-## ⚙️ Run Locally
-
-**Backend:**
-```bash
 cd backend
-python -m venv venv
-venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-```
 
-**Frontend:**
-```bash
+Frontend
+
 cd frontend
 npm install
 npm run dev
-```
 
----
+Deployment
 
-## 🌐 Deployment
+- Frontend: Vercel
+- Backend: Render
+- Database: Railway MySQL
 
-| Service | Platform | URL |
-|---|---|---|
-| Frontend | Vercel | [brain-battle-swart.vercel.app](https://brain-battle-swart.vercel.app) |
-| Backend | Render | [brainbattle-backend-ztcs.onrender.com](https://brainbattle-backend-ztcs.onrender.com) |
-| Database | Railway MySQL | Cloud hosted |
+Developer
 
----
+Maria Amir — Information Engineering Technology Student
 
-## 👩‍💻 Developer
-
-**Maria** — Information Engineering Technology Student  
-Backend Development · Database Design · Full-Stack Deployment
-
----
-
-> Built as a semester backend project demonstrating REST API design, JWT authentication, database management, and cloud deployment.
+Built as a backend semester project demonstrating REST APIs, JWT authentication, database management, and deployment.
