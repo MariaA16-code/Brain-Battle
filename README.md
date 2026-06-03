@@ -1,12 +1,14 @@
-# 🎮 BrainBattle — Quiz & Trivia Platform
+🎮 BrainBattle — Quiz & Trivia Platform
 
->A full-stack quiz application where users can register, take quizzes, view scores, and compete on a leaderboard.
+«A full-stack quiz application where users can register, take quizzes, view scores, and compete on a leaderboard.»
 
-🔗 **Live Demo:** [brain-battle-swart.vercel.app](https://brain-battle-swart.vercel.app)
+🚀 Live Demo
 
-Features
+🔗 https://brain-battle-swart.vercel.app
 
-User
+✨ Features
+
+👤 User
 
 - User registration and login
 - JWT authentication
@@ -15,13 +17,13 @@ User
 - View quiz results and scores
 - Global leaderboard
 
-Admin
+🛠️ Admin
 
 - Manage categories and quizzes
 - Add questions and answers
 - View user results
 
-Technologies Used
+🛠️ Technologies Used
 
 - Python
 - Django
@@ -31,72 +33,54 @@ Technologies Used
 - Tailwind CSS
 - JWT Authentication
 
-Project Structure
+📁 Project Structure
 
 Brain-Battle/
-
 ├── backend/
-
 │   ├── users/
-
 │   ├── quiz/
-
 │   ├── leaderboard/
-
 │   └── manage.py
-
 ├── frontend/
-
 │   ├── src/
-
 │   └── package.json
-
 └── README.md
 
-API Endpoints
+🔗 API Endpoints
 
 POST  /api/users/register/
-
 POST  /api/users/login/
-
 GET   /api/quiz/
-
 GET   /api/quiz/:id/
-
 POST  /api/quiz/submit/
-
 GET   /api/leaderboard/
 
-Run Locally
+⚙️ Run Locally
 
 Backend
 
 cd backend
-
 pip install -r requirements.txt
-
 python manage.py migrate
-
 python manage.py runserver
 
 Frontend
 
 cd frontend
-
 npm install
-
 npm run dev
 
-Deployment
+🌐 Deployment
 
 - Frontend: Vercel
-
 - Backend: Render
-
 - Database: Railway MySQL
 
-Developer
+👩‍💻 Developer
 
-Maria Amir — Information Engineering Technology Student
+Maria Amir
+Information Engineering Technology Student
 
-Built as a backend semester project demonstrating REST APIs, JWT authentication, database management, and deployment.
+---
+
+Built as a semester project demonstrating REST APIs, JWT authentication, database management, and cloud deployment.
