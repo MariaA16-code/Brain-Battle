@@ -15,10 +15,10 @@ by creating a quiz platform where users can test their knowledge.
 - Score tracking
 - Clean and responsive UI
 
-## Run Locally
 ```bash
 pip install -r requirements.txt
 python manage.py runserver
+```
 
 ## Live Demo
-View here(https://brain-battle-swart.vercel.app)
+View here (https://brain-battle-swart.vercel.app)
