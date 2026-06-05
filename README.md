@@ -21,4 +21,4 @@ pip install -r requirements.txt
 python manage.py runserver
 
 ## Live Demo
-View here (https://brain-battle-swart.vercel.app)
+View here(https://brain-battle-swart.vercel.app)
